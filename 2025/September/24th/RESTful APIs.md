@@ -62,3 +62,14 @@
 - If your audience is **completely new**, keep SOAP as a **side note**.  
 - If they are **IT students or developers**, include a REST vs SOAP section.  
 
+----
+
+## MCQ 1
+
+Which of the following is NOT a REST constraint?
+
+A. Client-Server
+B. Stateless
+C. Cacheable
+D. Persistent Connection
+
