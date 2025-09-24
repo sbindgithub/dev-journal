@@ -66,10 +66,66 @@
 
 ## MCQ 1
 
-Which of the following is NOT a REST constraint?
+# REST API – MCQs  
 
-A. Client-Server
-B. Stateless
-C. Cacheable
-D. Persistent Connection
+---
+
+## Question 1  
+Which of the following is **NOT** a REST constraint?  
+
+A. Client-Server  
+B. Stateless  
+C. Cacheable  
+D. Persistent Connection  
+
+---
+
+## Question 2  
+In REST, each resource is uniquely identified by:  
+
+A. Session ID  
+B. URI  
+C. IP Address  
+D. Port Number  
+
+---
+
+## Question 3  
+Which HTTP method is **idempotent**?  
+
+A. POST  
+B. GET  
+C. PUT  
+D. PATCH  
+
+---
+
+## Question 4  
+Which response code means **resource created successfully**?  
+
+A. 200 OK  
+B. 201 Created  
+C. 204 No Content  
+D. 404 Not Found  
+
+---
+
+## Question 5  
+What is the default data format widely used in REST APIs today?  
+
+A. XML  
+B. JSON  
+C. YAML  
+D. Binary  
+
+---
+
+# ✅ Answers with Explanation  
+
+1. **D. Persistent Connection** → Not a REST constraint.  
+2. **B. URI** → Each resource is identified by a unique URI.  
+3. **B. GET** → Idempotent (also PUT, DELETE, HEAD, OPTIONS are idempotent).  
+4. **B. 201 Created** → Correct response code when a resource is successfully created.  
+5. **B. JSON** → Most commonly used format in REST APIs today.  
+
 
