@@ -22,7 +22,7 @@ This ensures granular control over who can access which endpoints.
 All communications are secured via HTTPS. Sensitive data like passwords or connection strings are stored in Azure Key Vault or User Secrets during development.
 
 4️⃣ Application Hardening:
-I enable [CORS policies](url) to allow only trusted domains, implement input validation, and configure rate limiting to prevent DDoS or brute-force attacks.
+I enable [CORS policies](https://github.com/sbindgithub/dev-journal/blob/main/2025/October/6th/CORS%20Policies.md) to allow only trusted domains, implement input validation, and configure rate limiting to prevent DDoS or brute-force attacks.
 I also log all requests and exceptions for audit and traceability.
 
 (Optional closing)
