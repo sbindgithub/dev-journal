@@ -27,3 +27,78 @@ I also log all requests and exceptions for audit and traceability.
 
 (Optional closing)
 “In my Maersk L3-support project, we’ve integrated security scanning and validation steps within our CI/CD pipeline to ensure APIs comply with OWASP standards.”
+
+--
+
+I secure Web APIs using layered controls: authentication (who), authorization (what), data protection (how it’s transported/stored), and application hardening (prevent attacks).
+In practice I use JWT/OAuth2/OpenID Connect for authentication (Azure AD for enterprise SSO), role- and policy-based authorization in .NET Core, HTTPS + secrets in Azure Key Vault, and hardening like CORS, input validation, rate-limiting, logging and CI security scans. In my Maersk projects we also enforce security checks in the CI/CD pipeline to ensure OWASP best practices are met.
+
+- Authentication: JWT tokens or Azure AD (OAuth2 / OpenID Connect).
+
+- Authorization: Role-based and policy-based ([Authorize], IAuthorizationRequirement).
+
+- Transport & secrets: HTTPS, HSTS, Azure Key Vault / User Secrets for dev.
+
+- Hardening: CORS allowlist, input validation, anti-forgery where relevant, rate limiting, secure headers.
+
+- Operational: Centralized logging, audit trails, security scans in CI/CD.
+
+  1) Program.cs — Configure auth, CORS, endpoints (minimal .NET 6+ style)
+     
+``` 
+  var builder = WebApplication.CreateBuilder(args);
+
+// ----- CORS -----
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowOnlyMyFrontend", policy =>
+    {
+        policy.WithOrigins("https://mycompany-portal.com")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+// ----- Authentication: JWT -----
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+});
+
+// ----- Authorization: role & policy example -----
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("RequireAdmin", policy =>
+        policy.RequireRole("Admin"));
+    options.AddPolicy("OrderManager", policy =>
+        policy.RequireClaim("department", "orders"));
+});
+
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+app.UseHttpsRedirection();
+app.UseCors("AllowOnlyMyFrontend");
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+```
