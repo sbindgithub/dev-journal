@@ -102,3 +102,60 @@ app.MapControllers();
 
 app.Run();
 ```
+Simple JWT token generation (server-side token issuer)
+
+```
+public class TokenService
+{
+    private readonly IConfiguration _cfg;
+    public TokenService(IConfiguration cfg) => _cfg = cfg;
+
+    public string CreateToken(string userId, IEnumerable<string> roles, IDictionary<string,string> claims = null)
+    {
+        var claimsList = new List<Claim>
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, userId),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+        };
+
+        foreach (var r in roles) claimsList.Add(new Claim(ClaimTypes.Role, r));
+        if (claims != null)
+            foreach (var kv in claims)
+                claimsList.Add(new Claim(kv.Key, kv.Value));
+
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_cfg["Jwt:Key"]));
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        var token = new JwtSecurityToken(
+            issuer: _cfg["Jwt:Issuer"],
+            audience: _cfg["Jwt:Audience"],
+            claims: claimsList,
+            expires: DateTime.UtcNow.AddHours(1),
+            signingCredentials: creds);
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+}```
+3) Controller usage (authorization attributes)
+```
+[ApiController]
+[Route("api/[controller]")]
+public class OrdersController : ControllerBase
+{
+    // Any authenticated user
+    [HttpGet]
+    [Authorize] 
+    public IActionResult GetOrders() { ... }
+
+    // Only users with Admin role
+    [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
+    public IActionResult DeleteOrder(int id) { ... }
+
+    // Policy-based
+    [HttpPost("assign")]
+    [Authorize(Policy = "OrderManager")]
+    public IActionResult AssignOrder([FromBody] AssignDto dto) { ... }
+}
+
+```
