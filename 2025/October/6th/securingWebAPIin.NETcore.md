@@ -102,7 +102,7 @@ app.MapControllers();
 
 app.Run();
 ```
-Simple JWT token generation (server-side token issuer)
+2) Simple JWT token generation (server-side token issuer)
 
 ```
 public class TokenService
@@ -135,7 +135,9 @@ public class TokenService
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
-}```
+}
+```
+
 3) Controller usage (authorization attributes)
 ```
 [ApiController]
