@@ -43,7 +43,7 @@ In practice I use JWT/OAuth2/OpenID Connect for authentication (Azure AD for ent
 
 - Operational: Centralized logging, audit trails, security scans in CI/CD.
 
-  1) Program.cs — Configure auth, CORS, endpoints (minimal .NET 6+ style)
+  1. Program.cs — Configure auth, CORS, endpoints (minimal .NET 6+ style)
      
 ``` 
   var builder = WebApplication.CreateBuilder(args);
@@ -102,7 +102,7 @@ app.MapControllers();
 
 app.Run();
 ```
-2) Simple JWT token generation (server-side token issuer)
+2. Simple JWT token generation (server-side token issuer)
 
 ```
 public class TokenService
@@ -138,7 +138,7 @@ public class TokenService
 }
 ```
 
-3) Controller usage (authorization attributes)
+3. Controller usage (authorization attributes)
 ```
 [ApiController]
 [Route("api/[controller]")]
