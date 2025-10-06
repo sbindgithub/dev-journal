@@ -1,3 +1,5 @@
+👉 [securingWebAPIin.NETcore](https://github.com/sbindgithub/dev-journal/blob/main/2025/October/6th/securingWebAPIin.NETcore.md)
+
 What is CORS?
 
 CORS stands for Cross-Origin Resource Sharing.
