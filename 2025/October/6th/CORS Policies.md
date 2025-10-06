@@ -1,4 +1,4 @@
-👉 [securingWebAPIin.NETcore](https://github.com/sbindgithub/dev-journal/blob/main/2025/October/6th/securingWebAPIin.NETcore.md)
+👉 [securing Web API in .NET core](https://github.com/sbindgithub/dev-journal/blob/main/2025/October/6th/securingWebAPIin.NETcore.md)
 
 What is CORS?
 
