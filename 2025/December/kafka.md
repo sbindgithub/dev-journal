@@ -111,7 +111,7 @@ Kafka tries to assign replicas but no brokers are available to hold the extra co
 
 ## Topic Description Output
 
-```cmd
+
 C:\Users\sarada>kafka-topics.bat --describe --topic topic_03 --bootstrap-server localhost:9092
 
 Topic: topic_03
@@ -310,6 +310,7 @@ Offset:
 From confluent_kafka import producer
 Producer = producer()
 Producer.send(topic=, value=, partiion=)
+```
 
 If no key is sent, it goes with sticky partition / any partiono.
 
@@ -431,7 +432,7 @@ We have to define the Kafka brokers
 
 ```properties
 bootstrap.servers=localhost:9092
-
+```
 Converter--> How data is serialised or deserialised
 
 key.converter=org.apache.kafka.connect.json.JsonConverter
@@ -679,4 +680,5 @@ Permissions
 Who is allowed to write
 4.Application Security:
 SSL
+                              
                               THE END
