@@ -232,6 +232,7 @@ Based on port number- number of nodes are decided
 Where can I check I have three node kafka cluster.
 
 #Consumer Group:
+
 <img width="692" height="312" alt="image" src="https://github.com/user-attachments/assets/652e3a21-071d-4c25-afe1-d96a065cbe01" />
 
 Topic is broken down in to partitions and replicas.
