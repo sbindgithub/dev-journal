@@ -183,11 +183,14 @@ Kafka Cluster
 All of these brokers together form one cluster.
 
 Why do we need a cluster?
+
 Benefit	Explanation
+
 High availability	If one broker fails, another takes over
 Load balancing	Topic partitions can be spread across brokers
 Scalability	Add more brokers → more storage & processing power
 Replication	Data can be stored/copied across brokers
+
 set /p topic=Enter topic name?
 kafka-topics.bat --describe --bootstrap-server localhost:9092 --topic %topic%
 
@@ -227,6 +230,7 @@ Based on port number- number of nodes are decided
 ---
 
 Where can I check I have three node kafka cluster.
+
 #Consumer Group:
 <img width="692" height="312" alt="image" src="https://github.com/user-attachments/assets/652e3a21-071d-4c25-afe1-d96a065cbe01" />
 
@@ -301,7 +305,7 @@ Offset:
 ## Partitioning Mechanism
 
 1. Sticky Partitions / Round Robin  
-2. Hash partition / Key partition (partition no=hash_value%no of partiotion)  
+2. Hash partition / Key partition (partition no=hash_value%no of partitions)  
 3. Custom Partitioning  
 
 ---
@@ -333,7 +337,9 @@ Before Reset:
 
 
 After Reset:
+
 <img width="693" height="86" alt="image" src="https://github.com/user-attachments/assets/e1afbe56-1d1e-4fd0-8ad6-447382489a97" />
+
 After reset, it will reset the offset and start reading from zero.
 
 ---
@@ -356,6 +362,7 @@ After reset, it will reset the offset and start reading from zero.
 It is part of Kafka Eco system, that is moving data from in and out of Apachi Kafka without writing any code. If at all I have a business requirement
 
 <img width="693" height="334" alt="image" src="https://github.com/user-attachments/assets/55f048b2-efe1-4dcd-a77b-4c9cfdb287e6" />
+
 ## Kafka souce connector (inbound)
 
 1. We need Kafka souce connector: bringing data in to Kafka pulling data from different source and publishing data to Kafka.
@@ -378,7 +385,9 @@ It is part of Kafka Eco system, that is moving data from in and out of Apachi Ka
 - Configuration based pipelines
 - Fault toloerance and scalling
 - Standalone and distributed modes
+- 
 <img width="692" height="207" alt="image" src="https://github.com/user-attachments/assets/d1907fee-22bb-42c1-a40c-98bd6d4f10e9" />
+
 Kafka Connet Arcitechture
 
 <img width="692" height="213" alt="image" src="https://github.com/user-attachments/assets/df3acd3c-5bed-4cc7-85de-eaf112749b54" />
@@ -416,6 +425,7 @@ It process coninuous data and write data into Kafka.
 ## Incremental Data Injestion from MySQL to Kafka using Kafka Connect API
 
 <img width="546" height="234" alt="image" src="https://github.com/user-attachments/assets/53122969-c380-41d3-a364-7dce40b61603" />
+
 Any data/record that gets inserted into the table, the JDBC Source Connector reads the event and pushes into kafka.
 
 ---
@@ -497,6 +507,7 @@ My Sql Commands:
 CREATE DATABASE companydb;
 USE companydb;
 
+```SQL
 CREATE TABLE `employees` (
   `emp_id` int,
   `name` varchar(100),
@@ -504,10 +515,9 @@ CREATE TABLE `employees` (
   `salary` int DEFAULT NULL,
   PRIMARY KEY (`emp_id`)
 );
-
+```
 #Dt: 16Dec 2025
-**Data Contract:
-**
+** Dta Contract: **
 
 Consumer is indirectly couple with the dataformat with producer.
 
@@ -518,6 +528,7 @@ Process of converting objects into bytes, deserialization is the reverse of it.
 Deserialisation is restore the original state.
 
 <img width="692" height="164" alt="image" src="https://github.com/user-attachments/assets/107b68a7-6ff4-40ab-9597-41415bb6224b" />
+
 Class Employee
 {
 Private string fName,
@@ -537,6 +548,7 @@ Components:
 3.Sink
 
 <img width="692" height="288" alt="image" src="https://github.com/user-attachments/assets/b28fa1e7-e97f-439e-b22e-5a232f9f0b3b" />
+
 Distributed streaming platform
 Apache Sparc:
 - The most widely used Bigdata framework used is Sparc.
@@ -619,6 +631,7 @@ Open Table Format;
 Fault Tolerance: check pointing
 
 <img width="692" height="341" alt="image" src="https://github.com/user-attachments/assets/d5015e65-c809-41b5-ae80-1ac706c34e23" />
+
 Common Issues;
 Tuning Configurations: (Throughput and low latency)
 Replication
@@ -634,6 +647,7 @@ Brocker side Tuning
 Log Compaction:
 
 <img width="692" height="143" alt="image" src="https://github.com/user-attachments/assets/deef1eb5-1ea3-47d5-932c-0555bc7115b0" />
+
 At any point o f time keep the latest value of each key.
 To have the latest transaction- cluster level
 Choosing the right partition: (chooseing partition count)
@@ -655,7 +669,9 @@ Kafka Streaming:
 - Kafka Streams API
 
 <img width="692" height="233" alt="image" src="https://github.com/user-attachments/assets/dd19bcb5-bc27-44a0-97c9-d9fc21fe7f77" />
+
 Streams API Implementation
+
 1.Streams DSL(High level API)
 2.Processor API (Low level API)
 Kafka Streams Terminologies
@@ -664,7 +680,9 @@ Kafka Streams Terminologies
 3.Sinc Processor
 
 <img width="345" height="262" alt="image" src="https://github.com/user-attachments/assets/543abd77-f6cd-4666-8118-b5c33a615bf7" />
+
 Kafka Security:
+
 Four Layers:
 1.Encryption 
 2.Authentication
