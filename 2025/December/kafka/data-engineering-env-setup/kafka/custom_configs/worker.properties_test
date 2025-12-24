@@ -1,0 +1,8 @@
+bootstrap.servers=localhost:9092
+key.converter=org.apache.kafka.connect.json.JsonConverter
+value.converter=org.apache.kafka.connect.json.JsonConverter
+key.converter.schemas.enable=false
+value.converter.schemas.enable=false
+offset.storage.file.filename=C:/data-engineering-env-setup/kafka/logs/connect.offset
+plugin.path=D:/S_Team/Kafka_Training/data-engineering-env-setup/kafka/connectors/jdbc-connectors
+listeners=localhost:8084
