@@ -1,7 +1,7 @@
 # Supply Chain Management Training – Day 2
 
 ## Date
-9 Feb 2025
+3 Feb 2025
 
 ## Objective
 Day Two focuses on **Supply Chain fundamentals, optimization goals, logistics management, and supporting digital systems**.  
