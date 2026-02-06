@@ -123,7 +123,7 @@ EOQ = √(2DS / H)
 
 Where:
 - D = Annual demand
-- S = Ordering cost per order
+- S = Ordering cost per order / Setup cost
 - H = Holding cost per unit per year
 
 ---
