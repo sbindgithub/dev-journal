@@ -37,9 +37,7 @@ EOQ assumes:
 
 ### EOQ Formula
 
-\[
-EOQ = \sqrt{\frac{2DS}{H}}
-\]
+EOQ = sqrt((2 × D × S) / H)
 
 Where:
 - **D** = Annual demand (units/year)
@@ -55,17 +53,8 @@ Given:
 - Ordering cost (S) = ₹55 per order
 - Holding cost (H) = ₹15 per unit/year
 
-\[
-EOQ = \sqrt{\frac{2 \times 16000 \times 55}{15}}
-\]
-
-\[
-EOQ = \sqrt{117,333.33}
-\]
-
-\[
-EOQ \approx 342.5 \text{ units}
-\]
+EOQ = sqrt((2 × 16000 × 55) / 15)
+EOQ ≈ 342.5 units
 
 **Interpretation:**  
 The company should place orders of approximately **343 units per order**.
@@ -76,13 +65,9 @@ The company should place orders of approximately **343 units per order**.
 
 ### Number of Orders per Year
 
-\[
-\text{Orders per year} = \frac{D}{EOQ}
-\]
+Number of Orders = Annual Demand / EOQ
 
-\[
-= \frac{16000}{342.5} \approx 47 \text{ orders/year}
-\]
+Number of Orders = 16000 / 342.5 ≈ 47 orders per year
 
 ---
 
@@ -90,9 +75,8 @@ The company should place orders of approximately **343 units per order**.
 
 If the company operates **300 days per year**:
 
-\[
-\text{Order cycle time} = \frac{300}{47} \approx 6.4 \text{ days}
-\]
+Order Cycle Time = Operating Days / Number of Orders
+Order Cycle Time = 300 / 47 ≈ 6.4 days
 
 **Meaning:**  
 A new order is placed roughly every **6–7 days**.
@@ -102,20 +86,12 @@ A new order is placed roughly every **6–7 days**.
 ## 4. Holding Cost (Annual)
 
 Average inventory under EOQ:
-
-\[
-\text{Average inventory} = \frac{EOQ}{2}
-\]
-
-\[
-= \frac{342.5}{2} = 171.25 \text{ units}
-\]
+Average Inventory = EOQ / 2
 
 Annual holding cost:
 
-\[
-= 171.25 \times 15 = ₹2568.75
-\]
+Annual Holding Cost = (EOQ / 2) × H
+Annual Holding Cost = (342.5 / 2) × 15 ≈ ₹2569
 
 ---
 
@@ -126,10 +102,7 @@ Lead Time Demand is the quantity required **during the supplier lead time**.
 
 ### Formula
 
-\[
-\text{Lead Time Demand} = \text{Average Daily Demand} \times \text{Lead Time}
-\]
-
+Lead Time = Receipt Date − Order Date
 ---
 
 ### Example
@@ -141,16 +114,12 @@ If:
 
 Average daily demand:
 
-\[
-= \frac{16000}{300} \approx 53.33 \text{ units/day}
-\]
+Average Daily Demand = 16000 / 300 ≈ 53 units per day
 
 Lead time demand:
 
-\[
-= 53.33 \times 10 = 533 \text{ units}
-\]
-
+Lead Time Demand = Average Daily Demand × Lead Time
+Lead Time Demand = 53 × 10 = 530 units
 ---
 
 ## 6. Safety Stock
@@ -166,12 +135,10 @@ It is **not the same as lead time demand**.
 
 ### Basic Safety Stock Formula (Deterministic)
 
-\[
-\text{Safety Stock} =
-(\text{Max Daily Demand} \times \text{Max Lead Time})
--
-(\text{Avg Daily Demand} \times \text{Avg Lead Time})
-\]
+Safety Stock =
+(Max Daily Demand × Max Lead Time)
+−
+(Avg Daily Demand × Avg Lead Time)
 
 If variability is not provided, safety stock is either:
 - Given directly, or
@@ -186,10 +153,8 @@ Reorder Point is the inventory level at which a **new order must be placed**.
 
 ### Formula
 
-\[
-ROP = \text{Lead Time Demand} + \text{Safety Stock}
-\]
-
+ROP = Lead Time Demand + Safety Stock
+ROP = (Average Daily Demand × Lead Time) + Safety Stock
 ---
 
 ### Example
@@ -198,9 +163,7 @@ If:
 - Lead time demand = 533 units
 - Safety stock = 100 units
 
-\[
-ROP = 533 + 100 = 633 \text{ units}
-\]
+ROP = 530 + 100 = 630 units
 
 **Meaning:**  
 When inventory falls to **633 units**, place a new order.
