@@ -126,6 +126,161 @@ Where:
 - S = Ordering cost per order / Setup cost
 - H = Holding cost per unit per year
 
+# What is EOQ (Economic Order Quantity)?
+
+## Definition
+**EOQ (Economic Order Quantity)** is the order quantity that **minimizes the total inventory cost**.
+
+It does **not** mean:
+- Minimum stock
+- Minimum number of orders
+
+It means:
+- **Minimum total cost**
+
+---
+
+## Understanding Total Inventory Cost
+
+Total inventory cost has **two opposing components**:
+
+### 1. Ordering Cost
+- Cost incurred every time an order is placed
+- Includes paperwork, processing, transport, setup, etc.
+- **Decreases** when you order **larger quantities less frequently**
+
+### 2. Holding (Carrying) Cost
+- Cost of storing inventory
+- Includes storage, insurance, damage, obsolescence, capital cost
+- **Increases** when you order **larger quantities**
+
+---
+
+## Why EOQ Exists (Intuition First)
+
+### If you order **small quantities frequently**
+- Many orders
+- High ordering cost
+- Low holding cost
+
+### If you order **large quantities infrequently**
+- Few orders
+- Low ordering cost
+- High holding cost
+
+EOQ identifies the **sweet spot** where the **sum of ordering cost and holding cost is the lowest**.
+
+At EOQ:
+> **Ordering cost ≈ Holding cost**
+
+---
+
+## EOQ Formula
+
+\[
+\text{EOQ} = \sqrt{\frac{2DS}{H}}
+\]
+
+Where:
+- **D** = Annual demand (units/year)
+- **S** = Ordering cost per order
+- **H** = Holding cost per unit per year
+
+---
+
+## EOQ – Step-by-Step Example
+
+### Given:
+- Annual demand (**D**) = 12,000 units  
+- Ordering cost (**S**) = ₹80 per order  
+- Holding cost (**H**) = ₹25 per unit per year  
+
+---
+
+### Step 1: Apply the formula
+
+\[
+\text{EOQ} = \sqrt{\frac{2 \times 12{,}000 \times 80}{25}}
+\]
+
+\[
+= \sqrt{\frac{1{,}920{,}000}{25}}
+\]
+
+\[
+= \sqrt{76{,}800}
+\]
+
+\[
+\approx 277 \text{ units}
+\]
+
+---
+
+## Interpretation (Critical Concept)
+
+**EOQ = 277 units does NOT mean you keep 277 units in stock forever.**
+
+It means:
+- Every time you place an order, you should order **277 units**
+- This order size minimizes the **total inventory cost**
+
+---
+
+## Supporting Calculations (Proof of EOQ Logic)
+
+### Number of orders per year
+\[
+\frac{12{,}000}{277} \approx 43 \text{ orders/year}
+\]
+
+### Annual ordering cost
+\[
+43 \times 80 = ₹3{,}440
+\]
+
+### Average inventory held
+\[
+\frac{277}{2} = 138.5 \text{ units}
+\]
+
+### Annual holding cost
+\[
+138.5 \times 25 = ₹3{,}462.5
+\]
+
+### Key Observation
+➡ **Ordering cost ≈ Holding cost**
+
+This balance confirms that EOQ is correctly calculated.
+
+---
+
+## What EOQ Does NOT Consider
+
+EOQ assumes:
+- Constant demand
+- Fixed lead time
+- No stock-outs
+- No quantity discounts
+
+If these assumptions do not hold, **EOQ must be modified or replaced** with advanced models.
+
+---
+
+## EOQ vs ROP (Common Confusion)
+
+- **EOQ** → How much to order  
+- **ROP (Reorder Point)** → When to order  
+
+They solve **different inventory problems**.
+
+---
+
+## One-Line Interview-Ready Definition
+
+**EOQ is the optimal order quantity that minimizes the combined ordering and holding costs under stable demand conditions.**
+
 ---
 
 ## 8. Reorder Point (ROP)
