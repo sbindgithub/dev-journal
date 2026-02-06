@@ -177,9 +177,7 @@ At EOQ:
 
 ## EOQ Formula
 
-\[
-\text{EOQ} = \sqrt{\frac{2DS}{H}}
-\]
+EOQ = √(2 × D × S / H)
 
 Where:
 - **D** = Annual demand (units/year)
@@ -199,21 +197,14 @@ Where:
 
 ### Step 1: Apply the formula
 
-\[
-\text{EOQ} = \sqrt{\frac{2 \times 12{,}000 \times 80}{25}}
-\]
+EOQ = √(2 × 12,000 × 80 / 25)
 
-\[
-= \sqrt{\frac{1{,}920{,}000}{25}}
-\]
+= √(1,920,000 / 25)
 
-\[
-= \sqrt{76{,}800}
-\]
+= √76,800
 
-\[
-\approx 277 \text{ units}
-\]
+≈ 277 units
+
 
 ---
 
@@ -230,24 +221,17 @@ It means:
 ## Supporting Calculations (Proof of EOQ Logic)
 
 ### Number of orders per year
-\[
-\frac{12{,}000}{277} \approx 43 \text{ orders/year}
-\]
+12,000 / 277 ≈ 43 orders per year
 
 ### Annual ordering cost
-\[
-43 \times 80 = ₹3{,}440
-\]
+43 × 80 = ₹3,440
 
 ### Average inventory held
-\[
-\frac{277}{2} = 138.5 \text{ units}
-\]
+277 / 2 = 138.5 units
 
 ### Annual holding cost
-\[
-138.5 \times 25 = ₹3{,}462.5
-\]
+138.5 × 25 = ₹3,462.5
+
 
 ### Key Observation
 ➡ **Ordering cost ≈ Holding cost**
