@@ -291,5 +291,29 @@ Impact:
 - Smart warehouses win on speed, accuracy, and cost.
 
 ---
+# Difference Between Warehouse and Distribution Center
+
+| Aspect | Warehouse | Distribution Center (DC) |
+|------|----------|---------------------------|
+| Primary purpose | Long-term storage of goods | Rapid movement and redistribution of goods |
+| Focus | Inventory holding | Order fulfillment and flow |
+| Inventory stay | Medium to long duration | Very short duration |
+| Order processing | Minimal or none | Core activity |
+| Picking & packing | Limited or not required | Mandatory and high volume |
+| Throughput | Low to medium | High |
+| Customer orientation | Indirect (supports supply chain) | Direct (serves customers / retailers) |
+| Layout design | Storage-centric | Flow-centric |
+| Technology usage | Basic WMS | Advanced WMS, automation, real-time tracking |
+| Dock operations | Limited inbound/outbound | Heavy inbound and outbound operations |
+| Value-added services | Rare | Common (labeling, kitting, bundling) |
+| KPI focus | Storage utilization, inventory accuracy | Order cycle time, OTIF, throughput |
+| Cost driver | Space and holding cost | Speed, labor, and accuracy |
+| Typical industries | Manufacturing, raw materials | Retail, e-commerce, FMCG |
+
+---
+
+## One-line Summary
+
+**A warehouse stores inventory; a distribution center moves inventory.**
 
 End of Day 7
