@@ -22,4 +22,22 @@ The innermost circle containing business entities and state. It is fully indepen
 ### High Testability: Because the core has no external dependencies, it can be easily unit-tested without needing a live database or UI.
 ### Technology Agnostic: You can swap external technologies (e.g., switching from SQL to MongoDB) without changing the core business logic.
 
+## A persistence layer
+A persistence layer is a software abstraction layer that manages the storage, retrieval, and modification of data, allowing it to exist beyond an application's lifecycle, usually via a database. It acts as a bridge between the business logic and data storage, typically implementing CRUD operations and translating between in-memory objects and database rows. 
+
+### Key aspects of the persistence layer include:
+Abstraction: 
+It hides the complexity of SQL queries and specific database technologies from the business logic.
+
+Data Access Layer (DAL): Often referred to as a DAL, it decouples the application from the underlying storage mechanism.
+
+Components: It involves techniques like ORMs (Object-Relational Mapping), DAO (Data Access Objects), or Repository patterns.
+
+Key Functions:
+It handles data integration, transaction management, caching, and ensuring data consistency.
+Benefits: 
+It enhances maintainability, testability, and readability by separating data access logic from core application logic. 
+
+Common implementations include using Java Persistence API (JPA)****Spring Data JPA, or Hibernate in Java applications.
+Also EF
 
