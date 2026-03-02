@@ -3,6 +3,8 @@
 (also known as Clean Architecture), a software design pattern where dependencies flow inward toward a central Domain layer. 
 This structure ensures that the core business logic remains independent of external concerns like databases or user interfaces.
 
+<img width="396" height="392" alt="image" src="https://github.com/user-attachments/assets/0f7e418c-b5cd-4839-9f29-7b65cb1aea60" />
+
 ## Core Layers and Components
 ### Domain (The Core): 
 The innermost circle containing business entities and state. It is fully independent of all other layers.
@@ -14,6 +16,10 @@ The innermost circle containing business entities and state. It is fully indepen
 #### Persistence: A part of the infrastructure responsible for data storage and retrieval (e.g., database operations).
 #### Infrastructure: Manages external system access and third-party integrations. 
 
-
+## Key Design Principles
+### Inward Dependencies: Every layer only knows about the layers inside it. For example, the Persistence layer can depend on the Domain, but the Domain cannot depend on Persistence.
+### Dependency Inversion: Interfaces are defined in inner layers, while their concrete implementations (like specific database code) are placed in outer layers.
+### High Testability: Because the core has no external dependencies, it can be easily unit-tested without needing a live database or UI.
+### Technology Agnostic: You can swap external technologies (e.g., switching from SQL to MongoDB) without changing the core business logic.
 
 
