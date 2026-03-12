@@ -10,6 +10,9 @@
 | json
 | TraceId="2d7f208dffe70fcfc2923e9b29314294"
 
+## Search by content across Microservices:
+{k8s_cluster="nscm-prod-west-1", env="prod", namespace="mcl"}
+|= "CMAU4876974"
 
 ## Grafana Loki
 
