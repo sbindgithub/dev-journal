@@ -1,17 +1,35 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.9">
-  <diagram name="Page-1" id="fNDDn1SrC28XfNvmkLBh">
-    <mxGraphModel dx="1056" dy="970" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36" version="29.6.4">
+  <diagram name="Page-1" id="3YAtY41RRHh4mP6x8vo3">
+    <mxGraphModel dx="739" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Bq4HVxzGbbo3TdcXSS8u-7" edge="1" parent="1" source="SAmDif85kqsVZGc0HO-d-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Bq4HVxzGbbo3TdcXSS8u-6" value="">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-5" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="mJhaUK9IbKnrajrF15oG-4" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="SAmDif85kqsVZGc0HO-d-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="VUCA" vertex="1">
-          <mxGeometry height="60" width="120" x="160" y="280" as="geometry" />
+        <mxCell id="mJhaUK9IbKnrajrF15oG-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ISubject&lt;div&gt;(Attach, Detach, Notify)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="Bq4HVxzGbbo3TdcXSS8u-6" parent="1" style="whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;labelBackgroundColor=none;" value="Aggregation" vertex="1">
-          <mxGeometry height="60" width="120" x="360" y="280" as="geometry" />
+        <mxCell id="mJhaUK9IbKnrajrF15oG-6" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="mJhaUK9IbKnrajrF15oG-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mJhaUK9IbKnrajrF15oG-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="IObserver(Update)" vertex="1">
+          <mxGeometry height="60" width="120" x="410" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="mJhaUK9IbKnrajrF15oG-9" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mJhaUK9IbKnrajrF15oG-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mJhaUK9IbKnrajrF15oG-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Subscriber(Update)" vertex="1">
+          <mxGeometry height="60" width="120" x="410" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="mJhaUK9IbKnrajrF15oG-8" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="mJhaUK9IbKnrajrF15oG-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mJhaUK9IbKnrajrF15oG-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="YouTubeChannel(Attach, Detach, Notify-&amp;gt;subscriber.Update(), UploadVideo-&amp;gt;Notify())" vertex="1">
+          <mxGeometry height="60" width="280" x="80" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="mJhaUK9IbKnrajrF15oG-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Program.cs&lt;div&gt;Attach, Detach, UploadVideo&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="255" y="440" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
