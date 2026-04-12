@@ -4,25 +4,25 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="mJhaUK9IbKnrajrF15oG-5" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="mJhaUK9IbKnrajrF15oG-4" value="">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-5" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#788AA3;fontColor=default;" target="mJhaUK9IbKnrajrF15oG-4" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mJhaUK9IbKnrajrF15oG-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ISubject&lt;div&gt;(Attach, Detach, Notify)&lt;/div&gt;" vertex="1">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="ISubject&lt;div&gt;(Attach, Detach, Notify)&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="230" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="mJhaUK9IbKnrajrF15oG-6" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="mJhaUK9IbKnrajrF15oG-3" value="">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-6" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#788AA3;fontColor=default;" target="mJhaUK9IbKnrajrF15oG-3" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mJhaUK9IbKnrajrF15oG-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="IObserver(Update)" vertex="1">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="IObserver(Update)" vertex="1">
           <mxGeometry height="60" width="120" x="490" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="mJhaUK9IbKnrajrF15oG-9" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mJhaUK9IbKnrajrF15oG-7">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-9" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#788AA3;fontColor=default;" target="mJhaUK9IbKnrajrF15oG-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mJhaUK9IbKnrajrF15oG-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Subscriber(Update)" vertex="1">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Subscriber(Update)" vertex="1">
           <mxGeometry height="60" width="120" x="490" y="440" as="geometry" />
         </mxCell>
-        <mxCell id="mJhaUK9IbKnrajrF15oG-8" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="mJhaUK9IbKnrajrF15oG-7" value="">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-8" edge="1" parent="1" source="mJhaUK9IbKnrajrF15oG-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#788AA3;fontColor=default;" target="mJhaUK9IbKnrajrF15oG-7" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="290" y="470" />
@@ -30,10 +30,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mJhaUK9IbKnrajrF15oG-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="YouTubeChannel(Attach, Detach,&lt;b&gt; Notify-&amp;gt;subscriber.Update()&lt;/b&gt;, &lt;b&gt;UploadVideo-&amp;gt;Notify())&lt;/b&gt;" vertex="1">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="YouTubeChannel(Attach, Detach,&lt;b&gt; Notify-&amp;gt;subscriber.Update()&lt;/b&gt;, &lt;b&gt;UploadVideo-&amp;gt;Notify())&lt;/b&gt;" vertex="1">
           <mxGeometry height="110" width="350" x="115" y="300" as="geometry" />
         </mxCell>
-        <mxCell id="mJhaUK9IbKnrajrF15oG-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Program.cs&lt;div&gt;Attach, Detach, UploadVideo&lt;/div&gt;" vertex="1">
+        <mxCell id="mJhaUK9IbKnrajrF15oG-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Program.cs&lt;div&gt;Attach, Detach, UploadVideo&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="170" x="255" y="550" as="geometry" />
         </mxCell>
       </root>
